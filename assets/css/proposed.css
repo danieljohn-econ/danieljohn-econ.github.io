@@ -1,0 +1,48 @@
+body {
+  font-size: 17px;
+  color: #333; }
+
+autocolor {
+  color: #333; }
+
+@media screen and (min-width: 961px) {
+  header, footer {
+    width: 260px; } }
+header .position {
+  font-size: 1.05rem; }
+
+email {
+  font-family: inherit;
+  font-size: 0.95rem; }
+
+h3.paper-title {
+  font-size: 1.1rem;
+  line-height: 1.35;
+  margin: 0 0 4px; }
+
+h3.paper-title a {
+  color: #043361; }
+
+h3.paper-title a:hover {
+  text-decoration: underline; }
+
+p.paper-links {
+  font-size: 0.9rem;
+  margin: 0 0 12px; }
+
+p.paper-links a + a {
+  margin-left: 1rem; }
+
+body.proposed {
+  font-size: 18px;
+  line-height: 1.6; }
+
+body.proposed section h2:not(:first-child) {
+  margin-top: 1.8em; }
+
+@media (prefers-color-scheme: dark) {
+  body, autocolor {
+    color: #dadbdf; }
+
+  h1, h2, h3, h4, h5, h6, h3.paper-title a {
+    color: #eeeff0; } }

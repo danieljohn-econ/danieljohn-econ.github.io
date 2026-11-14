@@ -1,0 +1,16 @@
+/* Colours for both pages, and the light/dark switch.
+   Default: the reader's system setting. A click on the switch sets data-theme on <html> for the rest of the visit.
+   The dark palette is written twice, once for the system setting and once for the switch. Keep the two lines the same. */
+:root{color-scheme:light dark;--bg:#faf9f6;--fg:#3f3f3f;--heading:#043361;--accent:#2476b0;--line:#ddd}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#20212b;--fg:#dadbdf;--heading:#dadbdf;--accent:#78c5e9;--line:#424551}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#20212b;--fg:#dadbdf;--heading:#dadbdf;--accent:#78c5e9;--line:#424551}
+:root[data-theme="light"]{color-scheme:light}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;margin:-6px -9px -6px -6px;padding:0;border:0;border-radius:50%;background:none;color:var(--accent);cursor:pointer}
+.theme-toggle[hidden]{display:none}
+.theme-toggle:hover{background:var(--line)}
+.theme-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:0}
+.theme-toggle svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.theme-toggle .sun{display:none}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .theme-toggle .sun{display:block}:root:not([data-theme="light"]) .theme-toggle .moon{display:none}}
+:root[data-theme="dark"] .theme-toggle .sun{display:block}
+:root[data-theme="dark"] .theme-toggle .moon{display:none}
